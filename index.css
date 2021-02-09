@@ -1,0 +1,19 @@
+body {
+    color: black;
+    font-family: Source Code Pro;
+    letter-spacing: 8px;
+    display: block;
+    box-sizing: border-box;
+}
+header {
+    background-image: url('/assets/header.jpg');
+    padding: 20%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+main {
+    height: 2000px;
+    background-color: #F7FFEB;
+    background-image: url('/assets/main.png');
+    background-position: center;
+}
