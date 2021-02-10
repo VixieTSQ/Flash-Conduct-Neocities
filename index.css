@@ -1,19 +1,64 @@
+/* Layout stuff */
 body {
     color: black;
     font-family: Source Code Pro;
     letter-spacing: 8px;
     display: block;
     box-sizing: border-box;
+    text-align: center;
 }
 header {
-    background-image: url('/assets/header.jpg');
-    padding: 20%;
+    background-image: url('/assets/header.png');
+    padding: 26%;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
 }
 main {
     height: 2000px;
     background-color: #F7FFEB;
     background-image: url('/assets/main.png');
     background-position: center;
+}
+/* Button stuff */
+.button {
+    margin: 0 auto;
+    background-size: cover;
+    background-color: black;
+    line-height: 1155%;
+    min-width: 10%;
+    transition: all 0.25s linear;
+    text-decoration: none;
+    color: transparent;
+    border-color: black;
+    position: relative;
+}
+span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+#button-bandcamp {
+    float: right;
+    background-image: url('/assets/bandcamp.png');
+}
+#button-twitch {
+    float: left;
+    background-image: url('/assets/twitch.png');
+}
+#button-art {
+    float: right;
+    background-image: url('/assets/art.png')
+}
+.button:hover {
+    color: rgb(255, 255, 255);
+}
+.button::before:hover {    
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
 }
