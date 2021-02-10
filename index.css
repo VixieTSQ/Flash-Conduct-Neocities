@@ -1,6 +1,7 @@
 /* Layout stuff */
 body {
     color: black;
+    background-color: black;
     font-family: Source Code Pro;
     letter-spacing: 8px;
     display: block;
@@ -11,7 +12,7 @@ header {
     background-image: url('/assets/header.png');
     padding: 26%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     background-attachment: fixed;
 }
 main {
@@ -20,14 +21,20 @@ main {
     background-image: url('/assets/main.png');
     background-position: center;
 }
+footer {
+    background-color: black;
+    color: whitesmoke;
+    letter-spacing: 0px;
+    font-size: 15px;
+    padding-top: 3%;
+}
 /* Button stuff */
 .button {
-    margin: 0 auto;
+    margin: auto;
     background-size: cover;
     background-color: black;
     line-height: 1155%;
     min-width: 10%;
-    transition: all 0.25s linear;
     text-decoration: none;
     color: transparent;
     border-color: black;
@@ -51,14 +58,8 @@ span {
     background-image: url('/assets/art.png')
 }
 .button:hover {
-    color: rgb(255, 255, 255);
+    color: whitesmoke;
 }
-.button::before:hover {    
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.75;
+.button-dim:hover {
+    background-color: rgba(0, 0, 0, 0.5);
 }
