@@ -7,6 +7,7 @@ body {
     display: block;
     box-sizing: border-box;
     text-align: center;
+    margin: 0;
 }
 header {
     background-image: url('/assets/header.png');
@@ -17,28 +18,39 @@ header {
 }
 main {
     height: 2000px;
-    background-color: #F7FFEB;
     background-image: url('/assets/main.png');
     background-position: center;
+    position: relative;
+}
+#socials {
+    background-color: transparent;
+    position: absolute;
+    left: 43.21%;
+    top: 1670px;
+    margin: 0 auto;
+    padding: 1%;
+    border: 7px solid;
+    border-color: black;
+    border-radius: 20px;
 }
 footer {
     background-color: black;
     color: whitesmoke;
     letter-spacing: 0px;
     font-size: 15px;
-    padding-top: 3%;
+    padding-top: 2%;
+    overflow: hidden;
 }
 /* Button stuff */
 .button {
     margin: auto;
     background-size: cover;
-    background-color: black;
-    line-height: 1155%;
-    min-width: 10%;
+    line-height: 200px;
+    width: 200px;
     text-decoration: none;
     color: transparent;
     border-color: black;
-    position: relative;
+    position: absolute;
 }
 span {
     display: inline-block;
@@ -48,18 +60,54 @@ span {
 #button-bandcamp {
     float: right;
     background-image: url('/assets/bandcamp.png');
+    left: 55%;
+    top: 520px;
 }
 #button-twitch {
     float: left;
     background-image: url('/assets/twitch.png');
+    right: 55%;
+    top: 855px;
 }
 #button-art {
     float: right;
-    background-image: url('/assets/art.png')
+    background-image: url('/assets/art.png');
+    left: 55%;
+    top: 1185px;
+}
+#button-twitter {
+    float: center;
+    position: relative;
+    background-image: url('/assets/twitter.png');
+    background-color: transparent;
 }
 .button:hover {
     color: whitesmoke;
 }
 .button-dim:hover {
     background-color: rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 780px) {
+    .button {
+        line-height: 130px;
+        width: 130px;
+    }
+    #button-bandcamp {
+        left: 64%;
+        top: 560px;
+    }
+    #button-twitch {
+        right: 64%;
+        top: 885px;
+    }
+    #button-art {
+        left: 64%;
+        top: 1220px;
+    }
+}
+/* Style text */
+#moosic {
+    position: absolute;
+    top: 225px;
+    right: 55%;
 }
