@@ -10,6 +10,29 @@
         <link rel="stylesheet" href="lib/normalize.css">
         <link rel="stylesheet" href="lib/source-code-pro/source-code-pro.css">
         <link rel="stylesheet" href="index.css">
+        <script 
+			src="https://code.jquery.com/jquery-1.12.4.js"
+			integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+            crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            var window_height = 0;
+            function header_resize(height) {
+                $('header').css({height: height + 'px'});
+            }
+              //execute when the page's code has loaded into the browser
+            $(document).ready(function(){
+                //fetch the height of window as a number
+                window_height = $(window).height();
+                //call your function with a value
+                header_resize(window_height);
+            });
+              //execute whenever the browser window gets resized
+            $(window).resize(function(){
+                window_height = $(window).height();
+                header_resize(height);
+            });
+            /*]]>*/
+        </script>
     </head>
 
     <body>
@@ -19,13 +42,16 @@
             <a href="https://flash-conduct.bandcamp.com/"><div id="button-bandcamp" class="button"><div class="button-dim"><span>bandcamp</span></div></div></a>
             <a href="https://www.twitch.tv/iamxerbear_"><div id="button-twitch" class="button"><div class="button-dim"><span>Twitch</span></div></div></a>
             <a href="art.html"><div id="button-art" class="button"><div class="button-dim"><span>Art</span></div></div></a>
-            <div id="socials">
-                <a href="art.html"><div id="button-twitter" class="button"><div class="button-dim"><span>Twitter</span></div></div></a>
+            <div id="socials-wrapper">
+                <div id="socials">
+                    <a href="https://twitter.com/iamxerbear"><div id="button-twitter" class="button-socials"><div class="button-dim"><span>Twitter</span></div></div></a>
+                    <a href="https://www.youtube.com/channel/UCESPDkL0wDOG5xTPhAId5wA"><div id="button-youtube" class="button-socials"><div class="button-dim"><span>Twitter</span></div></div></a>
+                </div>
             </div>
         </main>
         <footer>
-            <p>Website painstakingly coded by Vixie/Three String Quartets. You can find my discord <a href="https://t.co/CVAYWTS5OM?amp=1">here</a>.</p>
-            <p>Site design (<del>heavily</del>) inspired by <a href="https://www.disr.pt/">www.disr.pt</a></p>
+            <p>Website painstakingly coded by Vixie/Three String Quartets. You can find my discord <a class="footer-link" href="https://t.co/CVAYWTS5OM?amp=1">here</a>.</p>
+            <p>Site design (<del>heavily</del>) inspired by <a class="footer-link" href="https://www.disr.pt/">www.disr.pt</a></p>
         </footer>
     </body>
 </html>

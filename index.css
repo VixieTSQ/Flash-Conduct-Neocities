@@ -7,11 +7,9 @@ body {
     display: block;
     box-sizing: border-box;
     text-align: center;
-    margin: 0;
 }
 header {
     background-image: url('/assets/header.png');
-    padding: 26%;
     background-repeat: no-repeat;
     background-position: top;
     background-attachment: fixed;
@@ -21,17 +19,22 @@ main {
     background-image: url('/assets/main.png');
     background-position: center;
     position: relative;
+    margin-top: 0.5%;
 }
-#socials {
+#socials  {
     background-color: transparent;
-    position: absolute;
-    left: 43.21%;
+    position: relative;
     top: 1670px;
-    margin: 0 auto;
     padding: 1%;
     border: 7px solid;
     border-color: black;
     border-radius: 20px;
+    left: 50%;
+}
+#socials-wrapper {
+    position: relative;
+    left: -50%;
+    margin: 0 auto
 }
 footer {
     background-color: black;
@@ -43,10 +46,20 @@ footer {
 }
 /* Button stuff */
 .button {
-    margin: auto;
     background-size: cover;
     line-height: 200px;
     width: 200px;
+    text-decoration: none;
+    color: transparent;
+    border-color: black;
+    position: absolute;
+    text-align: center;
+}
+.button-socials {
+    margin: auto;
+    background-size: cover;
+    line-height: 130px;
+    width: 130px;
     text-decoration: none;
     color: transparent;
     border-color: black;
@@ -60,26 +73,35 @@ span {
 #button-bandcamp {
     float: right;
     background-image: url('/assets/bandcamp.png');
-    left: 55%;
     top: 520px;
+    left: 50%;
+    margin-left: 60px;
 }
 #button-twitch {
     float: left;
     background-image: url('/assets/twitch.png');
-    right: 55%;
     top: 855px;
+    right: 50%;
+    margin-right: 60px;
 }
 #button-art {
     float: right;
     background-image: url('/assets/art.png');
-    left: 55%;
     top: 1185px;
+    left: 50%;
+    margin-left: 60px;
 }
 #button-twitter {
-    float: center;
     position: relative;
     background-image: url('/assets/twitter.png');
     background-color: transparent;
+    display: inline-block;
+}
+#button-youtube {
+    position: relative;
+    background-image: url('/assets/youtube.png');
+    background-color: transparent;
+    display: inline-block;
 }
 .button:hover {
     color: whitesmoke;
@@ -93,21 +115,53 @@ span {
         width: 130px;
     }
     #button-bandcamp {
-        left: 64%;
+        top: 560px;
+        margin-left: 50px;
+    }
+    #button-twitch {
+        top: 885px;
+        margin-right: 50px;
+    }
+    #button-art {
+        top: 1220px;
+        margin-left: 50px;
+    }
+    .button-socials {
+        line-height: 100px;
+        width: 100px;
+    }
+}
+@media screen and (max-width: 400px) {
+    #moosic {
+        margin-right: 50px;
+    }
+}
+@media screen and (max-width: 380px) {
+    #button-bandcamp {
         top: 560px;
     }
     #button-twitch {
-        right: 64%;
         top: 885px;
     }
     #button-art {
-        left: 64%;
         top: 1220px;
+    }
+    .button-socials {
+        line-height: 100px;
+        width: 100px;
+    }
+    #moosic {
+        margin-right: 50px;
     }
 }
 /* Style text */
 #moosic {
     position: absolute;
     top: 225px;
-    right: 55%;
+    right: 50%;
+    margin-right: 60px;
+}
+.footer-link:visited .footer-link:active .footer-link:active .footer-link:link .footer-link {
+    color: rgb(27, 106, 203);
+    text-decoration: none;
 }
