@@ -16,28 +16,35 @@
             crossorigin="anonymous"></script>
         <script type="text/javascript">
             var window_height = 0;
-            function header_resize(height) {
+            var window_height_img = 0
+            function header_resize(height, height_img) {
                 $('header').css({height: height + 'px'});
+                $('img').css({'margin-top': height_img + 'px'});
             }
               //execute when the page's code has loaded into the browser
             $(document).ready(function(){
                 //fetch the height of window as a number
                 window_height = $(window).height();
+                window_height_img = $(window).height() - 100;
                 //call your function with a value
-                header_resize(window_height);
+                header_resize(window_height, window_height_img);
             });
               //execute whenever the browser window gets resized
             $(window).resize(function(){
                 window_height = $(window).height();
-                header_resize(height);
+                window_height_img = $(window).height() - 100;
+                header_resize(window_height, window_height_img);
             });
             /*]]>*/
         </script>
     </head>
 
     <body>
-        <header></header>
+        <header>
+            <img src="assets/arrow.gif" alt="Scroll down">
+        </header>
         <main>
+            <!-- I am sorry for the div spam -->
             <p id="moosic">Creating the world's best music</p>
             <a href="https://flash-conduct.bandcamp.com/"><div id="button-bandcamp" class="button"><div class="button-dim"><span>bandcamp</span></div></div></a>
             <a href="https://www.twitch.tv/iamxerbear_"><div id="button-twitch" class="button"><div class="button-dim"><span>Twitch</span></div></div></a>

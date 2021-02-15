@@ -1,5 +1,6 @@
+/* It works. I will bother with making it less horrifyingly terrible later. I am so sorry for what you are about to witness */
 /* Layout stuff */
-body {
+body {+
     color: black;
     background-color: black;
     font-family: Source Code Pro;
@@ -13,13 +14,25 @@ header {
     background-repeat: no-repeat;
     background-position: top;
     background-attachment: fixed;
+    text-align: center;
+    box-sizing: border-box;
+}
+@media screen and (max-width: 520px) {
+    header {
+        background-size: 1380px;
+    }
+}
+img {
+    margin-top: 30%;
+    width: 50px;
+    height: 60px;
 }
 main {
     height: 2000px;
     background-image: url('/assets/main.png');
     background-position: center;
     position: relative;
-    margin-top: 0.5%;
+    margin-top: 8px;
 }
 #socials  {
     background-color: transparent;
@@ -30,6 +43,7 @@ main {
     border-color: black;
     border-radius: 20px;
     left: 50%;
+    display: inline-block;
 }
 #socials-wrapper {
     position: relative;
@@ -71,21 +85,18 @@ span {
     line-height: normal;
 }
 #button-bandcamp {
-    float: right;
     background-image: url('/assets/bandcamp.png');
     top: 520px;
     left: 50%;
     margin-left: 60px;
 }
 #button-twitch {
-    float: left;
     background-image: url('/assets/twitch.png');
     top: 855px;
     right: 50%;
     margin-right: 60px;
 }
 #button-art {
-    float: right;
     background-image: url('/assets/art.png');
     top: 1185px;
     left: 50%;
@@ -131,11 +142,6 @@ span {
         width: 100px;
     }
 }
-@media screen and (max-width: 400px) {
-    #moosic {
-        margin-right: 50px;
-    }
-}
 @media screen and (max-width: 380px) {
     #button-bandcamp {
         top: 560px;
@@ -150,9 +156,6 @@ span {
         line-height: 100px;
         width: 100px;
     }
-    #moosic {
-        margin-right: 50px;
-    }
 }
 /* Style text */
 #moosic {
@@ -161,7 +164,8 @@ span {
     right: 50%;
     margin-right: 60px;
 }
-.footer-link:visited .footer-link:active .footer-link:active .footer-link:link .footer-link {
-    color: rgb(27, 106, 203);
-    text-decoration: none;
+@media screen and (max-width: 400px) {
+    #moosic {
+        margin-right: 40px;
+    }
 }
