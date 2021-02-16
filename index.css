@@ -10,7 +10,7 @@ body {+
     text-align: center;
 }
 header {
-    background-image: url('/assets/header.png');
+    background-image: url('/assets/header.jpeg');
     background-repeat: no-repeat;
     background-position: top;
     background-attachment: fixed;
@@ -29,7 +29,7 @@ img {
 }
 main {
     height: 2000px;
-    background-image: url('/assets/main.png');
+    background-image: url('/assets/main.jpeg');
     background-position: center;
     position: relative;
     margin-top: 8px;
@@ -85,7 +85,7 @@ span {
     line-height: normal;
 }
 #button-bandcamp {
-    background-image: url('/assets/bandcamp.png');
+    background-image: url('/assets/bandcamp.jpeg');
     top: 520px;
     left: 50%;
     margin-left: 60px;
