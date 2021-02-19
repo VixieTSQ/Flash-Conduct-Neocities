@@ -1,0 +1,11 @@
+body {
+    font-family: Source Code Pro;
+    color: whitesmoke;
+    text-align: center;
+    background-color: black;
+}
+img {
+    margin-top: 3%;
+    max-width: 100%;
+    height: auto;
+}

@@ -57,6 +57,7 @@ footer {
     font-size: 15px;
     padding-top: 2%;
     overflow: hidden;
+    text-align: center;
 }
 /* Button stuff */
 .button {
